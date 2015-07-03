@@ -1,6 +1,7 @@
 {
   "name": "tuanlq11/securimage",
   "description": "SecurImage for Laravel 5.1",
+  "license": "MIT",
   "authors": [
     {
       "name": "Le Quoc Tuan",
