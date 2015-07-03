@@ -9,7 +9,7 @@ class SecurImageAutoLoad {
 
     public function getCaptchaHtml() {
         $html = sprintf(<<<EOF
-        <img src='%s' onclick='this.src="%s?" + Math.random(); return false;'>
+        <img src='%s' onclick='this.src="%s?" + Math.random(); return false;' style='cursor:pointer'>
 EOF
 , route('tuanlq11.securimage'), route('tuanlq11.securimage'));
 
