@@ -13,7 +13,7 @@
   },
   "autoload": {
     "psr-4": {
-      "TuanLq11\\SecurImage\\": "src/"
+      "tuanlq11\\securimage\\": "src/"
     }
   }
 }
