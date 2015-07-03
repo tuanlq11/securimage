@@ -31,5 +31,9 @@ class SecurimageServiceProvider extends ServiceProvider
         $app->bind('securimage', function () {
             return new SecurImageAutoLoad();
         });
+
+        $path = __DIR__ . '/config/securimage.php';
+        $this->mergeConfigFrom($path, 'securimage');
+        $this->publishes([$path => config_path('securimage.php')]);
     }
 }
