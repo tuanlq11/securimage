@@ -2,7 +2,7 @@
   "name": "tuanlq11/securimage",
   "description": "SecurImage for Laravel 5.1",
   "license": "MIT",
-  "minimum-stability": "1.0.0",
+  "minimum-stability": "stable",
   "authors": [
     {
       "name": "Le Quoc Tuan",
