@@ -1,0 +1,19 @@
+{
+  "name": "tuanlq11/securimage",
+  "description": "SecurImage for Laravel 5.1",
+  "authors": [
+    {
+      "name": "Le Quoc Tuan",
+      "email": "tuan.le@exe.com.vn"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "php": ">=5.4.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Illuminate\\": "src/Illuminate/"
+    }
+  }
+}
