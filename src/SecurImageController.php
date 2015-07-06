@@ -23,6 +23,8 @@ class SecurImageController extends Controller
         $captcha->image_height = $config['height'];
         $captcha->perturbation = $config['perturbation'];
         $captcha->case_sensitive = $config['case_sensitive'];
+        $captcha->num_lines = $config['num_lines'];
+        $captcha->charset = $config['charset'];
         $captcha->show();
     }
 
