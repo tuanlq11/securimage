@@ -12,9 +12,13 @@ class SecurimageServiceProvider extends ServiceProvider
     public function boot()
     {
         $app = $this->app;
-        \Validator::extend('captcha', function($flied, $value, $param) use ($app) {
+        \Validator::extend('captcha', function ($flied, $value, $param) use ($app) {
             return $app['securimage']->validator($value);
         }, 'Captcha is invalid!');
+
+        $path = __DIR__ . '/config/securimage.php';
+        $this->mergeConfigFrom($path, 'securimage');
+        $this->publishes([$path => config_path('securimage.php')], 'securimage');
     }
 
     /**
@@ -31,9 +35,5 @@ class SecurimageServiceProvider extends ServiceProvider
         $app->bind('securimage', function () {
             return new SecurImageAutoLoad();
         });
-
-        $path = __DIR__ . '/config/securimage.php';
-        $this->mergeConfigFrom($path, 'securimage');
-        $this->publishes([$path => config_path('securimage.php')]);
     }
 }
