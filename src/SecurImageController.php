@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
+use \Config as Config;
+
 require_once __DIR__ . "/lib/securimage/securimage.php";
 
 class SecurImageController extends Controller
