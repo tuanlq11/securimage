@@ -3,8 +3,8 @@
 namespace tuanlq11\securimage;
 
 use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\ServiceProvider;
+use \Validator as Validator;
 
 class SecurimageServiceProvider extends ServiceProvider
 {
@@ -12,7 +12,7 @@ class SecurimageServiceProvider extends ServiceProvider
     public function boot()
     {
         $app = $this->app;
-        \Validator::extend('captcha', function ($flied, $value, $param) use ($app) {
+        Validator::extend('captcha', function ($field, $value, $param) use ($app) {
             return $app['securimage']->validator($value);
         }, 'Captcha is invalid!');
 
