@@ -13,9 +13,14 @@ class SecurImageController extends Controller
 
     public function getCaptcha(Request $request)
     {
+        $config = Config::get('securimage');
+
         $captcha = new \Securimage();
-        $captcha->image_width = 150;
-        $captcha->image_height = 50;
+        $captcha->code_length = $config['length'];
+        $captcha->image_width = $config['width'];
+        $captcha->image_height = $config['height'];
+        $captcha->perturbation = $config['perturbation'];
+        $captcha->case_sensitive = $config['case_sensitive'];
         $captcha->show();
     }
 
